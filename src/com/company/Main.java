@@ -4,14 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
         Animal animal = new Animal();
-        Shark shark = new Shark("Dory","Blue",5);
-        Turtle turtle = new Turtle("Tashbaka","Grey",21);
-        Eagle eagle = new Eagle("Burkut","Brown",3);
 
-        Animal[] animals = {shark,turtle,eagle};
-        Animal[] animals1 = {new Shark(),
-                new Turtle(),
-                new Eagle()};
+        Animal[] animals = {new Shark("Dory","Blue",5),
+                new Turtle("Tashbaka","Grey",21),
+                new Eagle("Burkut","Brown",3)};
 
         for (Animal a : animals) {
             if (a.getClass().getName().equals("com.company.Shark")) {
@@ -29,9 +25,9 @@ public class Main {
             }
         }
 
-        Animal[] tashbaka = {animals[0]};
-        Animal[] balik = {animals[1]};
-        Animal[] kanattuu = {animals[2]};
-        
+        Shark[] sharks = {(Shark) animals[0]};
+        Turtle[] turtles = {(Turtle) animals[1]};
+        Eagle[] eagles = {(Eagle) animals[2]};
+
     }
 }
